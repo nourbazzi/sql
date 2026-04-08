@@ -56,7 +56,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+Type 1: Overwrite design. In this version, the table stores only the customer's current address. If a customer moves, the existing row is updated with the new address. The old address is lost. This is a slowly changing dimensions type 1, because the change overwrites the previous value and does not keep history.
+Type 2: Retain history design. In this version, the table keeps a record of address changes over time by adding a new row when the customer's address changes. This is a slowly changing dimensions type 2, because it preserves old versions of the address.
+So, type 1 overwrites changes, whereas type 2 retains address history by inserting new rows.
 ```
 
 ***
@@ -191,5 +193,8 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+This article makes the point that AI and neural networks are often talked about as if they are fully automated and thus objective, but in reality, there are people involved at every step. These systems do not just appear out of no where. They depend on real human labor to label data, organize categories, review outputs, and clean up harmful results afterwards. The issue is that a lot of that labour is hidden. The public only see the final AI product and not the many workers behind it, many of whom are underpaid and not properly acknowledged. 
+The article also made me think about bias in a different way. Contrary to popular belief, AI bias is not some mysterious technical flaw. It comes from human choices. People decide how to label images, what categories to use, and what counts as 'normal'. If these decisions reflect social prejudice, the model will learn those patterns too. 
+Even when companies try to make AI systems safer, that requires people to manually review disturbing or harmful material. That kind of work can have a real emotional cost. So there is an ethical question about who has to deal with the harm behind the scenes.
+The article also touches upon the intersection of technology and society. It talks about how AI systems are social and political as much as they are technical. This is because they are shaped by human values and existing inequalities. Because of this, when an AI system causes harm, responsibility should not just be blamed on "the algorithm". The people and companies building and using these systems should still be held accountable.
 ```
